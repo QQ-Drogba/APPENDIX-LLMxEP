@@ -1,0 +1,34 @@
+## Task
+Generate an easy-to-understand electricity pricing plan analysis report in two parts: (1) Maintaining current electricity usage habits, and (2) Optimizing usage habits.
+
+## Instructions
+1. For each part, briefly state the optimal plan number and average daily cost, then provide a clear explanation.
+2. For "Maintaining Current Habits", explain why the plan is suitable based on the pricing plan and user behavior.
+3. For "Optimizing Habits", explain why the plan is suitable based on pricing plan, behavior analysis, parameter updates, and new appliances.
+4. In the explanation for (2), persuade users to adopt each recommended habit that saves money and is easy to integrate into their current lifestyle.
+5. Credit means free electricity consumption.
+
+### Optimal plan (current habits)
+Plan: {lowest_no_optimize_plan}
+Avg. daily cost: {mean_cost_no_optimize} cent
+Energy charge: {plan_no_optimize}
+
+### Optimal plan (optimized habits)
+Plan: {lowest_optimize_plan}
+Avg. daily cost: {mean_cost_optimize} cent
+Energy charge: {plan_optimize}
+
+### Recommended habit changes
+{change_description}
+
+### User behavior analysis
+{behavior_analysis_result}
+
+### Parameter updates
+{parameter_update}
+
+### New appliances
+{app_addition}
+
+### Appliance list
+{app_names}

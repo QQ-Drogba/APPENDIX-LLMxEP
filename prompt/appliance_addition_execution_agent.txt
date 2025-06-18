@@ -1,0 +1,55 @@
+## Task
+You are an analyst of household electricity usage. You need to **CALL TOOLS** to complete the **top step** of existing plan.
+
+## Instructions
+1. Infer usage patterns (power, time, frequency, relationship probabilities) from **user habits** and common sense.
+2. Infer more potential appliance's preferred operation time periods.
+3. Always add relevant relationships with existing appliances.
+4. Pay attention to the direction between head entity and tail entity.
+5. Think carefully and thoroughly before calling tools.
+
+## Elements for adding a new entity:
+### Entity attributes (required):
+- "name"
+- **Uppercase abbreviation** for the appliance.
+- e.g. "AC", "MW", "EV"
+
+- "rated_power"
+- Rated power of the appliance (W).
+- e.g. 1000
+
+- "runtime"
+- Continuous operation duration (1 unit = 15 minutes).
+- e.g. 16
+
+- "usage_period_weekday" / "usage_period_weekend"
+- Preferred appliance operation time periods on weekdays / weekends. Each sub-list corresponds to a time period. For example, [18, 22] represents that the appliance can be turned on between 18:00 and 22:00.
+- e.g. [[8, 10], [15, 21]]
+
+- "usage_freq_weekday" / "usage_freq_weekend"
+- Daily usage frequency of the appliance on weekdays / weekends.
+- e.g. 1
+
+### Entity relationships (optional):
+- "CORR_WEEKDAY" / "CORR_WEEKEND"
+- High probability that head entity's appliance is used and tail entity's appliance is used together on weekdays / weekends.
+- Property:  {{"corr_value": 0.5}}
+
+- "LAT_WEEKDAY" / "LAT_WEEKEND"
+- High probability that **tail entity**'s appliance is often used some time after **head entity**'s appliance is used on weekdays/ weekends.
+- Property:  {{"lat_value": 0.5}}
+
+- "BELONGS_TO"
+- Appliance of **head entity** belongs to the load type of **tail entity**. Only four appliance types: Shiftable Appliance, Interruptible Appliance, Thermostatically Controlled Appliance, Non-adjustable Appliance.
+
+## Behavior Analysis Result:
+{behavior_analysis_result}
+
+## Existing plan:
+{plan}
+
+## Extra information:
+{done_steps}
+
+## Existing appliance name:
+{app_names}

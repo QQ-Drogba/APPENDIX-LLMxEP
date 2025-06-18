@@ -1,0 +1,49 @@
+# Task
+You are an analyst of electricity pricing plans and household electricity usage. Your task is to rate the factuality, logicality, expressiveness, and coverage of the **Electricity Pricing Plan Analysis Report** based on the **Provided Information**.
+
+# Evaluation Criteria
+- Factuality (0-10): Based on the provided information, evaluate how well the explanation or suggestion in the Electricity Pricing Plan Analysis Report matches the objective facts.
+- Logicality (0-10): Based on the provided information and common sense, evaluate how reasonable is the explanation or suggestion in the Electricity Pricing Plan Analysis Report.
+- Expressiveness (0-10): Based on the provided information, evaluate how clear each explanation or suggestion in the Electricity Pricing Plan Analysis Report is and how persuasive it is in encouraging changes in electricity usage behavior.
+- Coverage (0-10): For each recommended habit change in the provided information, evaluate how thoroughly the Electricity Pricing Plan Analysis Report reflects.
+
+# Evaluation Steps for Each explanation or suggestion of the Electricity Pricing Plan Analysis Report
+1. Analyze the meaning of each explanation or suggestion in the **Electricity Pricing Plan Analysis Report**.
+2. Fully read the **Provided Information** and find the corresponding information for each explanation or suggestion in the **Electricity Pricing Plan Analysis Report**.
+3. For each explanation or suggestion in the **Electricity Pricing Plan Analysis Report**, assign a score from 0 (not at all) to 10 (very well) for Factuality, Logicality, and Expressiveness based on the evaluation criteria.
+4. For each recommended habit change in the **Provided Information**, assign a score from 0 (not at all) to 10 (very well) for Coverage based on the evaluation criteria.
+
+# **JSON Output Format**
+The output should be a **JSON** containing the following fields:
+- `Factuality`: A dictionary where each key is the index (`idx`) of the explanation or suggestion in **Electricity Pricing Plan Analysis Report**, and the value is the factuality score (0-10).
+- `Logicality`: A dictionary where each key is the index (`idx`) of the explanation or suggestion in **Electricity Pricing Plan Analysis Report**, and the value is the logicality score (0-10).
+- `Expressiveness`: A dictionary where each key is the index (`idx`) of the explanation or suggestion in **Electricity Pricing Plan Analysis Report**, and the value is the expressiveness score (0-10).
+- `Coverage`: A dictionary where each key is the index (`idx`) of the recommended habit change in **Provided Information**, and the value is the coverage score (0-10).
+
+## Example **JSON** Output:
+{{
+    "Factuality": {{1: 8, 2: 7, 3: 10, ...}},
+    "Logicality": {{1: 9, 2: 6, 3: 10, ...}},
+    "Expressiveness": {{1: 7, 2: 8, 3: 9, ...}},
+    "Coverage": {{1: 7, 2: 8, 3: 9, ...}}
+}}
+- Note: Output Json in the specified format **without comments or explanations**.
+
+# Provided Information:
+## Optimal plan (current habits):
+{optimal_plan_chabit}
+
+## Optimal plan (optimized habits):
+{optimal_plan_ohabit}
+
+## Recommended habit changes:
+{optimal_plan_recommend}
+
+## User behavior analysis:
+{user_behavior_analysis_result}
+
+## Appliance list:
+{appliance_list}
+
+# Electricity Pricing Plan Analysis Report:
+{report}

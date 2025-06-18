@@ -1,0 +1,38 @@
+## Task
+You are an analyst of household electricity usage. Summarize the user's appliance usage habits and analyze possible reasons.
+
+## Instructions
+1. Summarize usage habits in appliances' **Relationships** for weekdays and weekends separately.
+2. Explain above habits using relevant user descriptions and appliance attributes.
+3. Add reasonable common sense if helpful.
+4. End by briefly explaining the reasons linked to lifestyle.
+5. Your analysis should be point-by-point, clear and concise.
+6. If there is no specific information at all, output "User behavior is temporarily unavailable.
+
+## Appliance attributes:
+- **usage_period**: The appliance may operate during part of these time periods. Each sub-list corresponds to a time period. For example, [18, 22] represents 18:00~22:00.
+- **usage_freq**: Average daily usage frequency.
+
+Note: If usage_period covers most of the day, the appliance runs frequently and the value of usage_period as well as usage_freq can be ignored.
+
+## User description:
+{user_descriptions}
+
+## Appliance names:
+{app_names}
+
+## Weekday usage:
+### Relationships:
+{lat_relationships_des_weekday}
+{corr_relationships_des_weekday}
+{same_pairs_des_weekday}
+### Appliance details:
+{entities_attributes_weekday}
+
+## Weekend usage:
+### Relationships:
+{lat_relationships_des_weekend}
+{corr_relationships_des_weekend}
+{same_pairs_des_weekend}
+### Appliance details:
+{entities_attributes_weekend}

@@ -1,0 +1,39 @@
+## Task
+You are an analyst of household electricity usage. Your task is to rate the factuality of updated parameters based on the given information.
+
+## Evaluation Criteria
+Factuality (0-10): Based on the provided information and common sense, evaluate how well the updated parameters meet the user's requirements.
+
+## Evaluation Steps for Updated Parameter:
+1. Understand the meaning of the user requirements and updated parameters.
+2. Use user habits, extra information and common sense to analyze the differences between user requirements and updated parameters.
+3. Assign a factuality score from 0 (not factual) to 10 (fully factual) based on the evaluation criteria.
+
+Note: When updating either usage_period_weekday/usage_period_weekend or usage_freq_weekday/usage_freq_weekend, consider if the other also needs to be updated.
+
+## **JSON Output Format**
+The output should be a **JSON** containing the following fields:
+- `score_usage_period`: The factuality score for updated "usage_period_weekday" / "usage_period_weekend" (0-10).
+- `score_usage_freq`: The factuality score for updated "usage_freq_weekday" / "usage_freq_weekend" (0-10).
+- Note: Output Json in the specified format **without comments or explanations**.
+
+### Example **JSON** Output:
+{{'score_usage_period': 8, 'score_usage_freq': 9}}
+
+## Descriptions of the parameters:
+- "usage_period_weekday" / "usage_period_weekend"
+ Preferred appliance operation time periods on weekdays / weekends. Each sub-list corresponds to a time period. For example, [18, 22] represents that the appliance can be turned on between 18:00 and 22:00.
+ e.g. [[8, 10], [15, 21]]
+
+- "usage_freq_weekday" / "usage_freq_weekend"
+ Daily usage frequency of the appliance on weekdays / weekends.
+ e.g. 1
+
+## User requirements:
+{input}
+
+## Updated parameter:
+{updated_param}
+
+## Extra information:
+{query_info}

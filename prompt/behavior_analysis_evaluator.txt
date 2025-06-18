@@ -1,0 +1,52 @@
+# Task
+You are an analyst of household electricity usage. Your task is to rate the factuality, logicality, and coverage of the **Behavior Analysis Result** based on the **Provided User Information**.
+
+# Evaluation Criteria
+- Factuality (0-10): Based on the provided user information, evaluate how well the description in the Behavior Analysis Result matches the objective facts.
+- Logicality (0-10): Based on the provided user information and common sense, evaluate how reasonable is the description in the Behavior Analysis Result.
+- Expressiveness (0-10): Based on the provided information, evaluate each item in the Behavior Analysis Result for clarity and the depth of insight into Behavior, rather than just factual description.
+- Coverage (0-10): For each relationship in the provided user information, evaluate how thoroughly the Behavior Analysis Result reflects.
+
+# Evaluation Steps for Each Point of the Behavior Analysis Result
+1. Analyze the meaning of each point in the **Behavior Analysis Result**.
+2. Fully read the **Provided User Information** and find the corresponding information for each point in the **Behavior Analysis Result**.
+3. For each point in the **Behavior Analysis Result**, assign a score from 0 (not at all) to 10 (very well) for Factuality, Expressiveness and Logicality based on the evaluation criteria.
+4. For each relationship in the **Provided User Information**, assign a score from 0 (not at all) to 10 (very well) for Coverage based on the evaluation criteria.
+
+# **JSON Output Format**
+The output should be a **JSON** containing the following fields:
+- `Factuality`: A dictionary where each key is the index (`idx`) of the point in **Behavior Analysis Result**, and the value is the factuality score (0-10).
+- `Logicality`: A dictionary where each key is the index (`idx`) of the point in **Behavior Analysis Result**, and the value is the logicality score (0-10).
+- `Expressiveness`: A dictionary where each key is the index (`idx`) of the point in **Behavior Analysis Result**, and the value is the expressiveness score (0-10).
+- `Coverage`: A dictionary where each key is the index (`idx`) of the relationship in **Provided User Information**, and the value is the coverage score (0-10).
+- Note: Output Json in the specified format **without comments or explanations**.
+
+## Example **JSON** Output:
+{{
+    "Factuality": {{1: 4, 2: 9, 3: 6, ...}},
+    "Logicality": {{1: 3, 2: 6, 3: 8, ...}},
+    "Expressiveness": {{1: 5, 2: 4, 3: 6, ...}},
+    "Coverage": {{1: 5, 2: 4, 3: 7, ...}}
+}}
+
+# Appliance attributes:
+- **usage_period**: The appliance may operate during part of these time periods. Each sub-list corresponds to a time period. For example, [18, 22] represents 18:00~22:00.
+- **usage_freq**: Average daily usage frequency.
+
+Note: If usage_period covers most of the day, the appliance runs frequently and the value of usage_period as well as usage_freq can be ignored.
+
+# Provided User Information:
+## User description:
+{user_description}
+
+## Appliance names:
+{appliance_names}
+
+## Weekday usage:
+{weekday_usage}
+
+## Weekend usage:
+{weekend_usage}
+
+# Behavior Analysis Result:
+{behavior_analysis_result}
