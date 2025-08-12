@@ -4,7 +4,7 @@ This repository accompanies the paper:
 
 **"Highly Personalized Electricity Pricing Plan Selection Empowered by Knowledge Graph-Enhanced Large Language Model"**
 
-**Authors:** Qingquan Luo, Tao Yu, Minhang Liang, Zongyuan Chen, Wenlong Guo, Wencong Xiao, and Zhenning Pan
+**Authors:** Qingquan Luo, Minhang Liang, Tao Yu, Zongyuan Chen, Wenlong Guo, Wencong Xiao, and Zhenning Pan
 
 ## Repository Contents
 
